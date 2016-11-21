@@ -3,9 +3,10 @@
 
   $token  = $_POST['stripeToken'];
   $amount = $_POST['amount'];
+  $email  = $_POST['stripeEmail'];
 
   $customer = \Stripe\Customer::create(array(
-      'email' => 'anilj@bsf.io',
+      'email' => $email,
       'card'  => $token
   ));
 

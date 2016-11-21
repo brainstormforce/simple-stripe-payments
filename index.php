@@ -8,7 +8,9 @@
       key: "pk_test_1V0y2RCkZmzF1fdtvg9Vc3dv",
       //image: '/stripe/asset/images/bsf-logo.png',
       // locale: 'auto',
+
       token: function(token) {
+
        // You can access the token ID with `token.id`.
         // Get the token ID to your server-side code for use.
          
@@ -16,6 +18,7 @@
            url: 'charge.php',
            data: {
               stripeToken: token.id,
+              stripeEmail: token.email,
               amount: ( jQuery('#bsf-amount').val() * 100 )
            },
            error: function() {
@@ -23,13 +26,10 @@
            },
            dataType: 'json',
            success: function(data) {
-              
               console.log(data);
-
            },
            type: 'POST'
         });
-
      }
     });
 
@@ -42,7 +42,7 @@
 
         handler.open({
           name: 'Brainstorm Force',
-          description: 'One year\'s subscription',
+          description: 'Partners for your digital journey',
           amount: ( jQuery('#bsf-amount').val() * 100 )
         });
         e.preventDefault();
