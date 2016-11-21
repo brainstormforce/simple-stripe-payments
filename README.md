@@ -1,1 +1,1 @@
-# contact-form-to-excel-addon
+# wp-stripe-checkout
