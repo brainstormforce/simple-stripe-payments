@@ -1,12 +1,13 @@
 <?php
+
 function bsf_create_payment_callback() {
 
   require_once( STRIPE_BASE_DIR . "/includes/config.php" ); 
 
-  $token  = $_POST['stripeToken'];
-  $email  = $_POST['stripeEmail'];
-  $amount = $_POST['amount'];
-  $description = $_POST['description'];
+  $token  = esc_attr( $_POST['stripeToken'] );
+  $email  = esc_attr( $_POST['stripeEmail'] );
+  $amount = esc_attr( $_POST['amount'] );
+  $description = esc_attr( $_POST['description'] );
 
   $customer = \Stripe\Customer::create(array(
       'email' => $email,

@@ -1,5 +1,4 @@
   document.addEventListener("DOMContentLoaded", function(event) { 
-    console.log(bsf_stripe.publishable_key);
     var handler = StripeCheckout.configure({
       key: bsf_stripe.publishable_key,
       //image: '/stripe/asset/images/bsf-logo.png',

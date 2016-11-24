@@ -14,7 +14,6 @@ function bsf_load_stripe_scripts() {
 	wp_enqueue_style('style', STRIPE_BASE_URL . 'assets/css/style.css');
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('stripe', 'https://checkout.stripe.com/checkout.js');
-	// wp_enqueue_script('js', STRIPE_BASE_URL . 'assets/js/jquery-3.1.1.min.js');
 	wp_register_script( 'stripe_processing', STRIPE_BASE_URL . 'includes/js/stripe-processing.js');
 
 	wp_localize_script( 'stripe_processing', 'bsf_stripe',

@@ -9,7 +9,7 @@ function bsf_stripe_render_options_page() {
 	global $stripe_options;
 	?>
 	<div class="wrap">
-		<h2><?php _e('Stripe Settings', 'bsf_stripe'); ?></h2>
+		<h2><?php _e('Stripe Settings', 'simple-stripe-payments'); ?></h2>
 		<form method="post" action="options.php">
 		
 			<?php settings_fields('stripe_settings_group'); ?>
@@ -18,7 +18,7 @@ function bsf_stripe_render_options_page() {
 				<tbody>
 					<tr valign="top">	
 						<th scope="row" valign="top">
-							<?php _e('Test Mode', 'test_mode'); ?>
+							<?php _e('Test Mode', 'simple-stripe-payments'); ?>
 						</th>
 						<td>
 							<input id="stripe_settings[test_mode]" name="stripe_settings[test_mode]" type="checkbox" value="1" <?php checked(1, $stripe_options['test_mode']); ?> />
@@ -28,43 +28,43 @@ function bsf_stripe_render_options_page() {
 				</tbody>
 			</table>	
 			
-			<h3 class="title"><?php _e('API Keys', 'bsf_stripe'); ?></h3>
+			<h3 class="title"><?php _e('API Keys', 'simple-stripe-payments'); ?></h3>
 			<table class="form-table">
 				<tbody>
 					<tr valign="top">	
 						<th scope="row" valign="top">
-							<?php _e('Live Secret', 'bsf_stripe'); ?>
+							<?php _e('Live Secret', 'simple-stripe-payments'); ?>
 						</th>
 						<td>
 							<input id="stripe_settings[live_secret_key]" name="stripe_settings[live_secret_key]" type="text" class="regular-text" value="<?php echo $stripe_options['live_secret_key']; ?>"/>
-							<label class="description" for="stripe_settings[live_secret_key]"><?php _e('Paste your live secret key.', 'bsf_stripe'); ?></label>
+							<label class="description" for="stripe_settings[live_secret_key]"><?php _e('Paste your live secret key.', 'simple-stripe-payments'); ?></label>
 						</td>
 					</tr>
 					<tr valign="top">	
 						<th scope="row" valign="top">
-							<?php _e('Live Publishable', 'bsf_stripe'); ?>
+							<?php _e('Live Publishable', 'simple-stripe-payments'); ?>
 						</th>
 						<td>
 							<input id="stripe_settings[live_publishable_key]" name="stripe_settings[live_publishable_key]" type="text" class="regular-text" value="<?php echo $stripe_options['live_publishable_key']; ?>"/>
-							<label class="description" for="stripe_settings[live_publishable_key]"><?php _e('Paste your live publishable key.', 'bsf_stripe'); ?></label>
+							<label class="description" for="stripe_settings[live_publishable_key]"><?php _e('Paste your live publishable key.', 'simple-stripe-payments'); ?></label>
 						</td>
 					</tr>
 					<tr valign="top">	
 						<th scope="row" valign="top">
-							<?php _e('Test Secret', 'bsf_stripe'); ?>
+							<?php _e('Test Secret', 'simple-stripe-payments'); ?>
 						</th>
 						<td>
 							<input id="stripe_settings[test_secret_key]" name="stripe_settings[test_secret_key]" type="text" class="regular-text" value="<?php echo $stripe_options['test_secret_key']; ?>"/>
-							<label class="description" for="stripe_settings[test_secret_key]"><?php _e('Paste your test secret key.', 'bsf_stripe'); ?></label>
+							<label class="description" for="stripe_settings[test_secret_key]"><?php _e('Paste your test secret key.', 'simple-stripe-payments'); ?></label>
 						</td>
 					</tr>
 					<tr valign="top">	
 						<th scope="row" valign="top">
-							<?php _e('Test Publishable', 'bsf_stripe'); ?>
+							<?php _e('Test Publishable', 'simple-stripe-payments'); ?>
 						</th>
 						<td>
 							<input id="stripe_settings[test_publishable_key]" name="stripe_settings[test_publishable_key]" class="regular-text" type="text" value="<?php echo $stripe_options['test_publishable_key']; ?>"/>
-							<label class="description" for="stripe_settings[test_publishable_key]"><?php _e('Paste your test publishable key.', 'bsf_stripe'); ?></label>
+							<label class="description" for="stripe_settings[test_publishable_key]"><?php _e('Paste your test publishable key.', 'simple-stripe-payments'); ?></label>
 						</td>
 					</tr>
 				</tbody>
@@ -74,11 +74,11 @@ function bsf_stripe_render_options_page() {
 				<tbody>
 					<tr valign="top">	
 						<th scope="row" valign="top">
-							<?php _e('Allow Recurring', 'bsf_stripe'); ?>
+							<?php _e('Allow Recurring', 'simple-stripe-payments'); ?>
 						</th>
 						<td>
 							<input id="stripe_settings[recurring]" name="stripe_settings[recurring]" type="checkbox" value="1" <?php checked(1, $stripe_options['recurring']); ?> />
-							<label class="description" for="stripe_settings[recurring]"><?php _e('Check this to allow users to setup recurring payments.', 'bsf_stripe'); ?></label>
+							<label class="description" for="stripe_settings[recurring]"><?php _e('Check this to allow users to setup recurring payments.', 'simple-stripe-payments'); ?></label>
 						</td>
 					</tr>
 				</tbody>
@@ -89,7 +89,7 @@ function bsf_stripe_render_options_page() {
 			</p>	
 		</form>
 		<div class="stripe-shortcode-display">
-		<h2><?php _e('Generated Short Code', 'bsf_stripe'); ?></h2>
+		<h2><?php _e('Generated Short Code', 'simple-stripe-payments'); ?></h2>
     	<pre id="stripe-shortcode-generator" style="padding:15px;background:#666;color:#fff;">[simple_stripe_payments_form]</pre>
     	</div>
 	<?php

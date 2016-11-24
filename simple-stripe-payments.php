@@ -7,7 +7,7 @@ Author: brainstormforce
 Author URI: http://brainstormforce.com/
 Contributors: Anil
 Version: 1.0
-Text Domain: bsf_stripe
+Text Domain: simple-stripe-payments
 */
 
 //Slug - bsf_
@@ -29,7 +29,7 @@ $stripe_options = get_option('stripe_settings');
 * Plugin text domain for translations
 *******************************************/
 
-load_plugin_textdomain( 'bsf_stripe', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+load_plugin_textdomain( 'simple-stripe-payments', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 /*******************************************
 * Declared global setting variables
