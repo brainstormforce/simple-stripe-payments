@@ -15,7 +15,7 @@ Supports Variable Amount in Checkout - Stripe
 
 The Really Simple Stripe Payments plugin allows you to accept credit card payments via Stripe payment gateway on your WordPress site easily. 
 
-It has a simple shortcode that lets you put Stripe ayment form anywhere on your site for a product or service. You can accept donation via Stripe also.
+It has a simple shortcode that lets you put Stripe payment form anywhere on your site for a product or service. You can accept donation via Stripe also.
 
 You can accespt custom payment from the user, with payment and payment dscriptions.
 
@@ -36,7 +36,7 @@ get payment from your website.
 
 The setup is very easy. Once you have installed the plugin, all you need to do is enter your Stripe API credentials in the plugin settings (Settings -> Stripe Payments) and your website will be ready to accept credit card payments.
 
-`[accept_stripe_payment]`
+`[really_simple_stripe_payments_form]`
 
 
 == Installation ==
