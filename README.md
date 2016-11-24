@@ -1,5 +1,6 @@
-# Really Simple Stripe Payments
-===  Really Simple Stripe Payments ===
+#  Simple Stripe Payments
+
+=== Simple Stripe Payments ===
 
 Contributors: brainstormforce, aniljbsfio
 Donate link: https://www.brainstormforce.com
@@ -13,7 +14,7 @@ Supports Variable Amount in Checkout - Stripe
 
 == Description ==
 
-The Really Simple Stripe Payments plugin allows you to accept credit card payments via Stripe payment gateway on your WordPress site easily. 
+The Simple Stripe Payments plugin allows you to accept credit card payments via Stripe payment gateway on your WordPress site easily. 
 
 It has a simple shortcode that lets you put Stripe payment form anywhere on your site for a product or service. You can accept donation via Stripe also.
 
@@ -36,7 +37,7 @@ get payment from your website.
 
 The setup is very easy. Once you have installed the plugin, all you need to do is enter your Stripe API credentials in the plugin settings (Settings -> Stripe Payments) and your website will be ready to accept credit card payments.
 
-`[really_simple_stripe_payments_form]`
+`[simple_stripe_payments_form]`
 
 
 == Installation ==
@@ -44,7 +45,7 @@ The setup is very easy. Once you have installed the plugin, all you need to do i
 = Using The WordPress Dashboard =
 
 1. Navigate to "Plugins->Add New" from your dashboard
-2. Search for 'Really Simple Stripe Payments'
+2. Search for ' Simple Stripe Payments'
 3. Click 'Install Now'
 4. Activate the plugin
 
@@ -52,15 +53,15 @@ The setup is very easy. Once you have installed the plugin, all you need to do i
 
 1. Navigate to the "Add New" in the plugins dashboard
 2. Navigate to the "Upload" area
-3. Select `really-simple-stripe-payments.zip` from your computer
+3. Select `simple-stripe-payments.zip` from your computer
 4. Click "Install Now"
 5. Activate the plugin in the Plugin dashboard
 
 = Using FTP =
 
-1. Download `really-simple-stripe-payments.zip`
-2. Extract the `really-simple-stripe-payments` directory on your computer
-3. Upload the `really-simple-stripe-payments` directory to the `/wp-content/plugins/` directory
+1. Download `simple-stripe-payments.zip`
+2. Extract the `simple-stripe-payments` directory on your computer
+3. Upload the `simple-stripe-payments` directory to the `/wp-content/plugins/` directory
 4. Activate it from the Plugins dashboard
 
 == Screenshots ==

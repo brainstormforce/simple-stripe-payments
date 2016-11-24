@@ -1,9 +1,8 @@
 <?php
-
 /**
-Plugin Name: Really Simple Stripe Payments
+Plugin Name: Simple Stripe Payments
 Plugin URI: http://brainstormforce.com/
-Description: Really Simple Stripe Payments is a WordPress plugin designed to make it easy for you to accept payments from your WordPress site.
+Description: Simple Stripe Payments is a WordPress plugin designed to make it easy for you to accept payments from your WordPress site.
 Author: brainstormforce
 Author URI: http://brainstormforce.com/
 Contributors: Anil

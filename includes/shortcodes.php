@@ -12,4 +12,4 @@ function bsf_stripe_payment_form() {
 	$output.='</div>';
 	return $output;
 }
-add_shortcode('really_simple_stripe_payments_form', 'bsf_stripe_payment_form');
+add_shortcode('simple_stripe_payments_form', 'bsf_stripe_payment_form');

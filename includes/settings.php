@@ -90,7 +90,7 @@ function bsf_stripe_render_options_page() {
 		</form>
 		<div class="stripe-shortcode-display">
 		<h2><?php _e('Generated Short Code', 'bsf_stripe'); ?></h2>
-    	<pre id="stripe-shortcode-generator" style="padding:15px;background:#666;color:#fff;">[really_simple_stripe_payments_form]</pre>
+    	<pre id="stripe-shortcode-generator" style="padding:15px;background:#666;color:#fff;">[simple_stripe_payments_form]</pre>
     	</div>
 	<?php
 }
