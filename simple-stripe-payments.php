@@ -1,13 +1,13 @@
 <?php
 /**
-* Plugin Name: Simple Stripe Payments
-* Plugin URI: http://brainstormforce.com/
-* Description: Simple Stripe Payments is a WordPress plugin designed to make it easy for you to accept payments from your WordPress site.
-* Author: brainstormforce
-* Author URI: http://brainstormforce.com/
-* Contributors: Anil
-* Version: 1.0
-* Text Domain: bsf_stripe
+Plugin Name: Simple Stripe Payments
+Plugin URI: http://brainstormforce.com/
+Description: Simple Stripe Payments is a WordPress plugin designed to make it easy for you  accept payments from your WordPress site.
+Author: brainstormforce
+Author URI: http://brainstormforce.com/
+Contributors: Anil
+Version: 1.0
+Text Domain: bsf_stripe
 */
 
 //Slug - bsf_
