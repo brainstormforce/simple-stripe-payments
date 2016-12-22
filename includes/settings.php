@@ -129,7 +129,8 @@ class Settings {
 	    	</div>
 		<?php
 		}
-	    // Checking if active tab is api_settings
+
+	    // Checking if active tab is general settings
 
 	    if( $active_tab == 'general_settings' ) {
 		?>
@@ -146,6 +147,7 @@ class Settings {
 								<?php _e('Button Title', 'simple-stripe-payments'); ?>
 							</th>
 							<td>
+
 								<input id="stripe_general_settings[form_button_title]" name="stripe_general_settings[form_button_title]" type="text" class="regular-text" value="<?php echo $stripe_general_settings['form_button_title']; ?>"/>
 								<p class="input-desc">The name of the button.</p>
 								<label class="description" for="stripe_general_settings[form_button_title]"></label>
@@ -222,7 +224,7 @@ class Settings {
 			</form>
 		<?php 
 		}
-
+		// Checking if tab is help options
 		if( $active_tab == 'help_options' ) {
 		?>
 		<h1>Help</h1>

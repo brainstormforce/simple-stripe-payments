@@ -24,6 +24,7 @@ if(!defined('STRIPE_BASE_DIR')) {
 }
 
 $stripe_options = get_option('stripe_settings');
+$stripe_general_settings = get_option('stripe_general_settings');
 
 /*******************************************
 * Plugin text domain for translations
@@ -73,6 +74,8 @@ add_action( 'init', 'add_ajax_actions' );
 if(is_admin()) {
 	// load admin includes
 	include(STRIPE_BASE_DIR . '/includes/settings.php');
+	include(STRIPE_BASE_DIR . '/includes/backend-scripts.php');
+	
 } else {
 // load front-end includes
 include(STRIPE_BASE_DIR . '/includes/scripts.php');
