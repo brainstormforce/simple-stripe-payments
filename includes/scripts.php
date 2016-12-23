@@ -29,7 +29,6 @@ class Scripts {
 		wp_enqueue_script('jquery');
 		wp_enqueue_script('stripe', 'https://checkout.stripe.com/checkout.js');
 		wp_register_script( 'stripe_processing', STRIPE_BASE_URL . 'includes/js/stripe-processing.js');
-		wp_enqueue_script( 'new-jquery-ui-script', plugin_dir_url( __FILE__ ).'../assets/js/script.js', array( 'jquery', 'jquery-ui-datepicker') );
 
 		wp_localize_script( 'stripe_processing', 'bsf_stripe',
 	        array( 
@@ -48,20 +47,23 @@ class Scripts {
 		global $stripe_general_settings;
 		$color = $stripe_general_settings['form_button_color'];
 		$hovercolor = $stripe_general_settings['form_button_hover_color'];
+		$title_color = $stripe_general_settings['form_button_title_color'];
+		$title_hovercolor = $stripe_general_settings['form_button_title_hover_color'];
 		?>
 
 		<style type="text/css">
 
 			#bsfStripeButton {
-				background: <?php echo $color ?>;
+				background:<?php echo $color ?>;
+				color:<?php echo $title_color ?>;;
 			}
 			#bsfStripeButton:hover {
-				background: <?php echo $hovercolor ?>
+				background:<?php echo $hovercolor ?>;
+				color:<?php echo $title_hovercolor ?>;;
 			}
 			
-		</style>
-		<?php
+		</style><?php
 	}
 
 }
-new Scripts;
+new Scripts();

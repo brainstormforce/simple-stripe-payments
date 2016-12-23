@@ -12,6 +12,11 @@ Text Domain: simple-stripe-payments
 
 //Slug - bsf_
 
+// If this file is called directly, abort. 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit();
+}
+
 /**********************************
 * Constants and globals
 **********************************/
@@ -24,6 +29,7 @@ if(!defined('STRIPE_BASE_DIR')) {
 }
 
 $stripe_options = get_option('stripe_settings');
+$stripe_general_settings = get_option('stripe_general_settings');
 
 /*******************************************
 * Plugin text domain for translations
@@ -36,7 +42,7 @@ load_plugin_textdomain( 'simple-stripe-payments', false, dirname( plugin_basenam
 *******************************************/
 
 if ( !array_key_exists( 'test_mode', $stripe_options ) ) {
-	$stripe_options['test_mode'] = false;
+	$stripe_options['test_mode'] = 'false';
 }
 
 if ( !array_key_exists( 'live_secret_key', $stripe_options ) ) {
@@ -73,8 +79,31 @@ add_action( 'init', 'add_ajax_actions' );
 if(is_admin()) {
 	// load admin includes
 	include(STRIPE_BASE_DIR . '/includes/settings.php');
+	include(STRIPE_BASE_DIR . '/includes/backend-scripts.php');
+	
 } else {
 // load front-end includes
 include(STRIPE_BASE_DIR . '/includes/scripts.php');
 include(STRIPE_BASE_DIR . '/includes/shortcodes.php');
 }
+
+
+    if(!get_option('stripe_general_settings')) {
+    	$blog_tagline = get_bloginfo ( 'description' );
+    	$blog_title = get_bloginfo( 'name' );
+        //not present, so add
+        $op = array(
+            'form_button_title' => 'Pay',
+            'form_button_color' => '#3691b0',
+            'form_button_title_color' => '#fff',
+            'form_button_hover_color' => '#ADD8E6',
+            'form_button_title_hover_color' => '#000',
+            'stripe_title' => $blog_title,
+            'tag_line_for_stripe' => $blog_tagline,
+            'stripe_pay_button' => 'Pay',
+            'stripe_currency_type' => 'USD'
+        );
+        add_option('stripe_general_settings', $op);
+    }
+
+?>

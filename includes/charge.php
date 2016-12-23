@@ -8,12 +8,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 function bsf_create_payment_callback() {
 
   require_once( STRIPE_BASE_DIR . "/includes/config.php" ); 
-  
-  $stripe_general_settings = get_option('stripe_general_settings');
-  $token  = esc_attr( $_POST['stripeToken'] );
-  $email  = esc_attr( $_POST['stripeEmail'] );
-  $amount = esc_attr( $_POST['amount'] );
-  $description = esc_attr( $_POST['description'] );
+    $stripe_general_settings = get_option('stripe_general_settings');
+    $token  = esc_attr( $_POST['stripeToken'] );
+    $email  = esc_attr( $_POST['stripeEmail'] );
+    $amount = esc_attr( $_POST['amount'] );
+    $description = esc_attr( $_POST['description'] );
 
   $customer = \Stripe\Customer::create(array(
       'email' => $email,

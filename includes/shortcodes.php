@@ -27,5 +27,4 @@ class Shortcode {
 		return $output;
 	}
 }
-new Shortcode;
-
+new Shortcode();

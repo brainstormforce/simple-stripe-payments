@@ -104,16 +104,15 @@ class Settings {
 						</tr>
 					</tbody>
 				</table>	
-				
 				<!--<table class="form-table">
 					<tbody>
 						<tr valign="top">	
 							<th scope="row" valign="top">
-								<?php _e('Allow Recurring', 'simple-stripe-payments'); ?>
+								<?php // _e('Allow Recurring', 'simple-stripe-payments'); ?>
 							</th>
 							<td>
-								<input id="stripe_settings[recurring]" name="stripe_settings[recurring]" type="checkbox" value="1" <?php checked(1, $stripe_options['recurring']); ?> />
-								<label class="description" for="stripe_settings[recurring]"><?php _e('Check this to allow users to setup recurring payments.', 'simple-stripe-payments'); ?></label>
+								<input id="stripe_settings[recurring]" name="stripe_settings[recurring]" type="checkbox" value="1" <?php // checked(1, $stripe_options['recurring']); ?> />
+								<label class="description" for="stripe_settings[recurring]"><?php // _e('Check this to allow users to setup recurring payments.', 'simple-stripe-payments'); ?></label>
 							</td>
 						</tr>
 					</tbody>
@@ -124,7 +123,7 @@ class Settings {
 				</p>	
 			</form>
 			<div class="stripe-shortcode-display">
-			<h2><?php _e('Generated Short Code', 'simple-stripe-payments'); ?></h2>
+			<h2><?php _e( 'Generated Short Code', 'simple-stripe-payments' ); ?></h2>
 	    	<pre id="stripe-shortcode-generator" style="padding:15px;background:#666;color:#fff;">[simple_stripe_payments_form]</pre>
 	    	</div>
 		<?php
@@ -147,29 +146,49 @@ class Settings {
 							</th>
 							<td>
 								<input id="stripe_general_settings[form_button_title]" name="stripe_general_settings[form_button_title]" type="text" class="regular-text" value="<?php echo $stripe_general_settings['form_button_title']; ?>"/>
-								<p class="input-desc">The name of the button.</p>
+								<p class="input-desc"><?php _e( 'The name of the button','simple-stripe-payments' )?></p>
 								<label class="description" for="stripe_general_settings[form_button_title]"></label>
 							</td>
 						</tr>
 						<tr valign="top">	
 							<th scope="row" valign="top">
-								<?php _e('Button Color', 'simple-stripe-payments'); ?>
+								<?php _e('Button Background Color', 'simple-stripe-payments'); ?>
 							</th>
-							<td>
+							<td> 
 								<input id="stripe_general_settings[form_button_color] image_url" name="stripe_general_settings[form_button_color]" type="hidden" class="regular-text cpa-color-picker" value="<?php echo $stripe_general_settings['form_button_color']; ?>"/>
-								<p class="input-desc">Select the color of the Button.</p>
+								<p class="input-desc"><?php _e( 'Select the color of the Button','simple-stripe-payments' )?></p>
 
 								<label class="description" for="stripe_general_settings[form_button_color]"></label>
 							</td>
 						</tr>
 						<tr valign="top">	
 							<th scope="row" valign="top">
-								<?php _e('Button Color on hover', 'simple-stripe-payments'); ?>
+								<?php _e('Button Title Color', 'simple-stripe-payments'); ?>
+							</th>
+							<td>
+								<input id="stripe_general_settings[form_button_title_color] image_url" name="stripe_general_settings[form_button_title_color]" type="hidden" class="regular-text cpa-color-picker" value="<?php echo $stripe_general_settings['form_button_title_color']; ?>"/>
+								<p class="input-desc"><?php _e( 'Select the color of the Button Title','simple-stripe-payments' )?></p>
+								<label class="description" for="stripe_general_settings[form_button_title_color]"></label>
+							</td>
+						</tr>
+						<tr valign="top">	
+							<th scope="row" valign="top">
+								<?php _e('Button Background Hover Color', 'simple-stripe-payments'); ?>
 							</th>
 							<td>
 								<input id="stripe_general_settings[form_button_hover_color] image_url" name="stripe_general_settings[form_button_hover_color]" type="hidden" class="regular-text cpa-color-picker" value="<?php echo $stripe_general_settings['form_button_hover_color']; ?>"/>
-								<p class="input-desc">Select the hover color of the Button.</p>
+								<p class="input-desc"><?php _e( 'Select the hover color of the Button','simple-stripe-payments' )?></p>
 								<label class="description" for="stripe_general_settings[form_button_hover_color]"></label>
+							</td>
+						</tr>
+						<tr valign="top">	
+							<th scope="row" valign="top">
+								<?php _e('Button Title Hover Color', 'simple-stripe-payments'); ?>
+							</th>
+							<td>
+								<input id="stripe_general_settings[form_button_title_hover_color] image_url" name="stripe_general_settings[form_button_title_hover_color]" type="hidden" class="regular-text cpa-color-picker" value="<?php echo $stripe_general_settings['form_button_title_hover_color']; ?>"/>
+								<p class="input-desc"><?php _e( 'Select the hover color of the Button Title','simple-stripe-payments' )?></p>
+								<label class="description" for="stripe_general_settings[form_button_title_hover_color]"></label>
 							</td>
 						</tr>
 						<tr valign="top">	
@@ -178,7 +197,7 @@ class Settings {
 							</th>
 							<td>
 								<input id="stripe_general_settings[stripe_title]" name="stripe_general_settings[stripe_title]" type="text" class="regular-text" value="<?php echo $stripe_general_settings['stripe_title']; ?>"/>
-								<p class="input-desc">The name of your store or website.</p>
+								<p class="input-desc"><?php _e( 'The name of your store or website','simple-stripe-payments' )?></p>
 								<label class="description" for="stripe_general_settings[stripe_title]"></label>
 							</td>
 						</tr>
@@ -188,7 +207,7 @@ class Settings {
 							</th>
 							<td>
 								<input id="stripe_general_settings[tag_line_for_stripe]" name="stripe_general_settings[tag_line_for_stripe]" type="text" class="regular-text" value="<?php echo $stripe_general_settings['tag_line_for_stripe']; ?>"/>
-								<p class="input-desc">The tagline of your store or website.</p>
+								<p class="input-desc"><?php _e( 'The tagline of your store or website','simple-stripe-payments' )?></p>
 
 								<label class="description" for="stripe_general_settings[tag_line_for_stripe]"></label>
 							</td>
@@ -199,7 +218,7 @@ class Settings {
 							</th>
 							<td>
 								<input id="stripe_general_settings[stripe_pay_button]" name="stripe_general_settings[stripe_pay_button]" type="text" class="regular-text" value="<?php echo $stripe_general_settings['stripe_pay_button']; ?>"/>
-								<p class="input-desc">The name on the stripe payment button.</p>
+								<p class="input-desc"><?php _e( 'The name on the stripe payment button','simple-stripe-payments' )?></p>
 								<label class="description" for="stripe_general_settings[stripe_pay_button]"></label>
 							</td>
 						</tr>
@@ -209,7 +228,7 @@ class Settings {
 							</th>
 							<td>
 								<input id="stripe_general_settings[stripe_currency_type]" name="stripe_general_settings[stripe_currency_type]" type="text" class="regular-text" value="<?php echo $stripe_general_settings['stripe_currency_type']; ?>"/>
-								<p class="input-desc">Specify a currency using it's <a href="https://support.stripe.com/questions/which-currencies-does-stripe-support#currencygroup1" target="_blank">3-letter Code</a>.</p>
+								<p class="input-desc"><?php _e( 'Specify a currency using it\'s <a href="https://support.stripe.com/questions/which-currencies-does-stripe-support#currencygroup1" target="_blank">3-letter Code</a>','simple-stripe-payments' )?></p>
 								<label class="description" for="stripe_general_settings[stripe_currency_type]"></label>
 							</td>
 						</tr>
@@ -221,6 +240,7 @@ class Settings {
 				</p>	
 			</form>
 		<?php 
+
 		}
 
 		if( $active_tab == 'help_options' ) {
@@ -240,4 +260,3 @@ class Settings {
 }
 new Settings();
 ?>
-
