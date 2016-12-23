@@ -9,8 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Scripts {
 
 	public function __construct() {
-		add_action('init', array( $this, 'bsf_load_stripe_scripts') );
-		add_action( 'init', array( $this, 'custom_css') );
+		add_action('wp_enqueue_scripts', array( $this, 'bsf_load_stripe_scripts') );
+		add_action( 'wp_head', array( $this, 'custom_css') );
 
 	}
 

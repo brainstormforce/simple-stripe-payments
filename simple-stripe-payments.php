@@ -86,8 +86,6 @@ if(is_admin()) {
 include(STRIPE_BASE_DIR . '/includes/scripts.php');
 include(STRIPE_BASE_DIR . '/includes/shortcodes.php');
 }
-
-
     if(!get_option('stripe_general_settings')) {
     	$blog_tagline = get_bloginfo ( 'description' );
     	$blog_title = get_bloginfo( 'name' );
