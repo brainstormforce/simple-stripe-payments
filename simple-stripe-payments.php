@@ -60,7 +60,21 @@ if ( !array_key_exists( 'test_secret_key', $stripe_options ) ) {
 if ( !array_key_exists( 'test_publishable_key', $stripe_options ) ) {
 	$stripe_options['test_publishable_key'] = '';
 }
+if ( !array_key_exists( 'form_button_color', $stripe_general_settings ) ) {
+    $stripe_general_settings['form_button_color'] = '';
+}
 
+if ( !array_key_exists( 'form_button_hover_color', $stripe_general_settings ) ) {
+    $stripe_general_settings['form_button_hover_color'] = '';
+}
+
+if ( !array_key_exists( 'form_button_title_color', $stripe_general_settings ) ) {
+    $stripe_general_settings['form_button_title_color'] = '';
+}
+
+if ( !array_key_exists( 'form_button_title_hover_color', $stripe_general_settings ) ) {
+    $stripe_general_settings['form_button_title_hover_color'] = '';
+}
 
 /**********************************
 * includes
