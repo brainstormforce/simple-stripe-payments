@@ -60,7 +60,6 @@ class BSF_Scripts {
 				background:<?php echo $hovercolor ?>;
 				color:<?php echo $title_hovercolor ?>;;
 			}
-			
 		</style><?php
 	}
 
