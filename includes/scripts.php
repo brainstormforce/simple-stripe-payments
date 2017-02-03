@@ -1,12 +1,11 @@
 <?php
 
-
 // If this file is called directly, abort. 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit();
 }
 
-class Scripts {
+class BSF_Scripts {
 
 	public function __construct() {
 		add_action('wp_enqueue_scripts', array( $this, 'bsf_load_stripe_scripts') );
@@ -66,4 +65,4 @@ class Scripts {
 	}
 
 }
-new Scripts();
+new BSF_Scripts();

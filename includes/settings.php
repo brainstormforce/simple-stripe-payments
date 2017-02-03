@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit();
 }
 
-class Settings {
+class BSF_Settings {
 
 	public function __construct() {
 		add_action('admin_menu', array( $this, 'bsf_stripe_settings_setup') );
@@ -37,7 +37,7 @@ class Settings {
 			<h2 class="nav-tab-wrapper">
 	                <a href="?page=stripe-settings&tab=api_settings" class="nav-tab <?php echo $active_tab == 'api_settings' ? 'nav-tab-active' : ''; ?>"><?php _e('API Settings', 'simple-stripe-payments') ?></a>
 	                <a href="?page=stripe-settings&tab=general_settings" class="nav-tab <?php echo $active_tab == 'general_settings' ? 'nav-tab-active' : ''; ?>"><?php _e('General Settings', 'simple-stripe-payments') ?></a>
-	                <a href="?page=stripe-settings&tab=help_options" class="nav-tab <?php echo $active_tab == 'help_options' ? 'nav-tab-active' : ''; ?>"><?php _e('Help', 'simple-stripe-payments') ?></a>
+	                
 	            </h2>
 	        <?php
 
@@ -103,21 +103,7 @@ class Settings {
 							</td>
 						</tr>
 					</tbody>
-				</table>	
-				<!--<table class="form-table">
-					<tbody>
-						<tr valign="top">	
-							<th scope="row" valign="top">
-								<?php // _e('Allow Recurring', 'simple-stripe-payments'); ?>
-							</th>
-							<td>
-								<input id="stripe_settings[recurring]" name="stripe_settings[recurring]" type="checkbox" value="1" <?php // checked(1, $stripe_options['recurring']); ?> />
-								<label class="description" for="stripe_settings[recurring]"><?php // _e('Check this to allow users to setup recurring payments.', 'simple-stripe-payments'); ?></label>
-							</td>
-						</tr>
-					</tbody>
-				</table> -->
-				
+				</table>			
 				<p class="submit">
 					<input type="submit" class="button-primary" value="<?php _e('Save Options', 'mfwp_domain'); ?>" />
 				</p>	
@@ -242,17 +228,9 @@ class Settings {
 				</p>	
 			</form>
 		<?php 
-
-		}
-		// Checking if tab is help options
-		if( $active_tab == 'help_options' ) {
-		?>
-		<h1>Help</h1>
-		<?php 
 		}
 	}
 
-		
 	function bsf_stripe_register_settings() {
 		// creates our settings in the options table
 		register_setting('stripe_settings_group', 'stripe_settings');
@@ -260,5 +238,4 @@ class Settings {
 	}
 
 }
-new Settings();
-?>
+new BSF_Settings();

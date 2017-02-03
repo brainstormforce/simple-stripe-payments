@@ -12,4 +12,3 @@ function color_picker_assets($hook_suffix) {
 	    wp_enqueue_script( 'my-script-handle', plugins_url('../assets/js/jquery.custom.js', __FILE__  ), array( 'wp-color-picker' ), false, true );
 	    wp_enqueue_style( 'custom-css' , plugins_url('../assets/css/backend-css.css', __FILE__  ) );
 }
-?>

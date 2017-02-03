@@ -102,22 +102,21 @@ if(is_admin()) {
 include(STRIPE_BASE_DIR . '/includes/scripts.php');
 include(STRIPE_BASE_DIR . '/includes/shortcodes.php');
 }
-    if(!get_option('stripe_general_settings')) {
-    	$blog_tagline = get_bloginfo ( 'description' );
-    	$blog_title = get_bloginfo( 'name' );
-        //not present, so add
-        $op = array(
-            'form_button_title' => 'Pay',
-            'form_button_color' => '#3691b0',
-            'form_button_title_color' => '#fff',
-            'form_button_hover_color' => '#ADD8E6',
-            'form_button_title_hover_color' => '#000',
-            'stripe_title' => $blog_title,
-            'tag_line_for_stripe' => $blog_tagline,
-            'stripe_pay_button' => 'Pay',
-            'stripe_currency_type' => 'USD'
-        );
-        add_option('stripe_general_settings', $op);
-    }
 
-?>
+if(!get_option('stripe_general_settings')) {
+	$blog_tagline = get_bloginfo ( 'description' );
+	$blog_title = get_bloginfo( 'name' );
+    //not present, so add
+    $op = array(
+        'form_button_title' => 'Pay',
+        'form_button_color' => '#3691b0',
+        'form_button_title_color' => '#fff',
+        'form_button_hover_color' => '#ADD8E6',
+        'form_button_title_hover_color' => '#000',
+        'stripe_title' => $blog_title,
+        'tag_line_for_stripe' => $blog_tagline,
+        'stripe_pay_button' => 'Pay',
+        'stripe_currency_type' => 'USD'
+    );
+    add_option('stripe_general_settings', $op);
+}

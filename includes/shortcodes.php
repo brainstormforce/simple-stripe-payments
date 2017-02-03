@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit();
 }
 
-class Shortcode {	
+class BSF_Shortcode {	
 	public function __construct() {
 		add_shortcode('simple_stripe_payments_form', array( $this, 'bsf_stripe_payment_form') );		
 	}
@@ -27,4 +27,4 @@ class Shortcode {
 		return $output;
 	}
 }
-new Shortcode();
+new BSF_Shortcode();

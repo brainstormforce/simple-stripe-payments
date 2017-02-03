@@ -25,5 +25,4 @@ function bsf_create_payment_callback() {
       'description' => $description,
       'currency' => $stripe_general_settings['stripe_currency_type']
   ));
-  
 }
