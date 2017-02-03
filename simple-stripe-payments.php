@@ -31,6 +31,8 @@ if(!defined('STRIPE_BASE_DIR')) {
 $stripe_options = get_option('stripe_settings');
 $stripe_general_settings = get_option('stripe_general_settings');
 
+$stripe_options = ( $stripe_options ) ? $stripe_options : array();
+
 /*******************************************
 * Plugin text domain for translations
 *******************************************/
