@@ -5,6 +5,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit();
 }
 
+if ( ! class_exists( 'BSF_Settings' ) ) :
+
 class BSF_Settings {
 
 	public function __construct() {
@@ -236,6 +238,8 @@ class BSF_Settings {
 		register_setting('stripe_settings_group', 'stripe_settings');
 		register_setting('stripe_general_settings_group', 'stripe_general_settings');
 	}
-
 }
+
+endif;
+
 new BSF_Settings();

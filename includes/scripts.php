@@ -5,6 +5,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit();
 }
 
+if ( ! class_exists( 'BSF_Scripts' ) ) :
+
 class BSF_Scripts {
 
 	public function __construct() {
@@ -64,4 +66,7 @@ class BSF_Scripts {
 	}
 
 }
+
+endif;
+
 new BSF_Scripts();
