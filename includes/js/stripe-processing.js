@@ -1,10 +1,12 @@
   document.addEventListener("DOMContentLoaded", function(event) { 
     var handler = StripeCheckout.configure({
+
+      panelLabel: bsf_stripe.stripe_button_text,
       key: bsf_stripe.publishable_key,
       token: function(token) {
        // You can access the token ID with `token.id`.
         // Get the token ID to your server-side code for use.
-        console.log(bsf_stripe.ajaxurl);
+        // console.log(bsf_stripe.ajaxurl);
 
          jQuery.ajax({  
            url: bsf_stripe.ajaxurl,
@@ -30,8 +32,9 @@
        bsf_pay_amount.addEventListener('click', function(e) {
           // Open Checkout with further options:
           handler.open({
-            name: 'Brainstorm Force',
-            description: 'Partners for your digital journey',
+            name: bsf_stripe.stripe_title,
+            description: bsf_stripe.stripe_tagline,
+            currency: bsf_stripe.stripe_currency,
             amount: ( jQuery('#bsf-amount').val() * 100 )
           });
           e.preventDefault();
