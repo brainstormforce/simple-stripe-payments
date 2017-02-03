@@ -5,9 +5,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit();
 }
 
-if ( ! class_exists( 'BSF_Shortcode' ) ) :
+if ( ! class_exists( 'Simple_Stripe_Payment_Shortcode' ) ) :
 
-class BSF_Shortcode {	
+class Simple_Stripe_Payment_Shortcode {	
 	public function __construct() {
 		add_shortcode('simple_stripe_payments_form', array( $this, 'bsf_stripe_payment_form') );		
 	}
@@ -32,4 +32,4 @@ class BSF_Shortcode {
 
 endif;
 
-new BSF_Shortcode();
+new Simple_Stripe_Payment_Shortcode();

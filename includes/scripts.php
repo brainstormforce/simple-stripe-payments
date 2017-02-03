@@ -5,9 +5,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit();
 }
 
-if ( ! class_exists( 'BSF_Scripts' ) ) :
+if ( ! class_exists( 'Simple_Stripe_Payment_Scripts' ) ) :
 
-class BSF_Scripts {
+class Simple_Stripe_Payment_Scripts {
 
 	public function __construct() {
 		add_action('wp_enqueue_scripts', array( $this, 'bsf_load_stripe_scripts') );
@@ -69,4 +69,4 @@ class BSF_Scripts {
 
 endif;
 
-new BSF_Scripts();
+new Simple_Stripe_Payment_Scripts();

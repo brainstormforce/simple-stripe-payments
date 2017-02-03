@@ -5,9 +5,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit();
 }
 
-if ( ! class_exists( 'BSF_Settings' ) ) :
+if ( ! class_exists( 'Simple_Stripe_Payment_Settings' ) ) :
 
-class BSF_Settings {
+class Simple_Stripe_Payment_Settings {
 
 	public function __construct() {
 		add_action('admin_menu', array( $this, 'bsf_stripe_settings_setup') );
@@ -242,4 +242,4 @@ class BSF_Settings {
 
 endif;
 
-new BSF_Settings();
+new Simple_Stripe_Payment_Settings();
