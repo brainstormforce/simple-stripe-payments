@@ -1,12 +1,14 @@
 ===  Simple Stripe Payments ===
+
 Contributors: brainstormforce, aniljbsfio
-Donate link: https://www.brainstormforce.com
+Donate link: https://www.paypal.me/BrainstormForce
 Tags: stripe, custom payment, variable payment, payment with description button, pament stripe, payment gateway, instant variable payment, brainstormforce stripe
 Requires at least: 3.7
-Tested up to: 4.4.2
-Stable tag: 1.4.0
-License: 
-License URI: 
+Tested up to: 4.7.2
+Stable tag: 1.0.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
 Supports Variable Amount in Checkout - Stripe
 
 == Description ==
