@@ -1,14 +1,5 @@
 ===  Simple Stripe Payments ===
 
-Contributors: brainstormforce, aniljbsfio
-Donate link: https://www.paypal.me/BrainstormForce
-Tags: stripe, custom payment, variable payment, payment with description button, pament stripe, payment gateway, instant variable payment, brainstormforce stripe
-Requires at least: 3.7
-Tested up to: 4.7.3
-Stable tag: 1.0.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
 Supports Variable Amount in Checkout - Stripe
 
 == Description ==
@@ -39,28 +30,3 @@ The setup is very easy. Once you have installed the plugin, all you need to do i
 `[simple_stripe_payments_form]`
 
 
-== Installation ==
-
-= Using The WordPress Dashboard =
-
-1. Navigate to "Plugins->Add New" from your dashboard
-2. Search for 'Simple Stripe Payments'
-3. Click 'Install Now'
-4. Activate the plugin
-
-= Uploading via WordPress Dashboard =
-
-1. Navigate to the "Add New" in the plugins dashboard
-2. Navigate to the "Upload" area
-3. Select `simple-stripe-payments.zip` from your computer
-4. Click "Install Now"
-5. Activate the plugin in the Plugin dashboard
-
-= Using FTP =
-
-1. Download `simple-stripe-payments.zip`
-2. Extract the `simple-stripe-payments` directory on your computer
-3. Upload the `simple-stripe-payments` directory to the `/wp-content/plugins/` directory
-4. Activate it from the Plugins dashboard
-
-== Screenshots ==

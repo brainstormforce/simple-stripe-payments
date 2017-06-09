@@ -38,6 +38,9 @@ The setup is very easy. Once you have installed the plugin, all you need to do i
 
 `[simple_stripe_payments_form]`
 
+== Changelog ==
+
+Initial release
 
 == Installation ==
 
