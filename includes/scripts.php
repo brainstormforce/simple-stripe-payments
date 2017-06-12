@@ -5,62 +5,62 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit();
 }
 
-if ( ! class_exists( 'Simple_Stripe_Payment_Scripts' ) ) :
+if ( ! class_exists( 'SSP_Payment_Scripts' ) ) :
 
-class Simple_Stripe_Payment_Scripts {
+class SSP_Payment_Scripts {
 
 	public function __construct() {
-		add_action('wp_enqueue_scripts', array( $this, 'bsf_load_stripe_scripts') );
+		add_action('wp_enqueue_scripts', array( $this, 'ssp_load_ssp_scripts') );
 		add_action( 'wp_head', array( $this, 'custom_css') );
 
 	}
 
-	function bsf_load_stripe_scripts() {
+	function ssp_load_ssp_scripts() {
 		
-		global $stripe_options;
-		global $stripe_general_settings;	
+		global $ssp_options;
+		global $ssp_general_settings;	
 		// check to see if we are in test mode
-		if( isset($stripe_options['test_mode']) && $stripe_options['test_mode']) {
-			$publishable = $stripe_options['test_publishable_key'];
+		if( isset($ssp_options['test_mode']) && $ssp_options['test_mode']) {
+			$publishable = $ssp_options['test_publishable_key'];
 		} else {
-			$publishable = $stripe_options['live_publishable_key'];
+			$publishable = $ssp_options['live_publishable_key'];
 		}
 
-		wp_enqueue_style('style', STRIPE_BASE_URL . 'assets/css/style.css');
+		wp_enqueue_style('style', SSP_BASE_URL . 'assets/css/style.css');
 		wp_enqueue_script('jquery');
 		wp_enqueue_script('stripe', 'https://checkout.stripe.com/checkout.js');
-		wp_register_script( 'stripe_processing', STRIPE_BASE_URL . 'includes/js/stripe-processing.js');
+		wp_register_script( 'ssp_processing', SSP_BASE_URL . 'includes/js/stripe-processing.js');
 
-		wp_localize_script( 'stripe_processing', 'bsf_stripe',
+		wp_localize_script( 'ssp_processing', 'ssp_stripe',
 	        array( 
 	            'ajaxurl' => admin_url( 'admin-ajax.php' ),        
 	            'publishable_key' => $publishable,
-	            'stripe_title' => $stripe_general_settings['stripe_title'],
-	         	'stripe_tagline' => $stripe_general_settings['tag_line_for_stripe'],
-	      		'stripe_button_text' => $stripe_general_settings['stripe_pay_button'],
-	      		'stripe_currency' => $stripe_general_settings['stripe_currency_type']	   
+	            'ssp_title' => $ssp_general_settings['ssp_title'],
+	         	'ssp_tagline' => $ssp_general_settings['tag_line_for_stripe'],
+	      		'ssp_button_text' => $ssp_general_settings['ssp_pay_button'],
+	      		'ssp_currency' => $ssp_general_settings['ssp_currency_type']	   
 	        )
 	    );
 
-	    wp_enqueue_script( 'stripe_processing' );
+	    wp_enqueue_script( 'ssp_processing' );
 	}
 	function custom_css() {
-		global $stripe_general_settings;
-		$color = $stripe_general_settings['form_button_color'];
-		$hovercolor = $stripe_general_settings['form_button_hover_color'];
-		$title_color = $stripe_general_settings['form_button_title_color'];
-		$title_hovercolor = $stripe_general_settings['form_button_title_hover_color'];
+		global $ssp_general_settings;
+		$color = $ssp_general_settings['form_button_color'];
+		$hovercolor = $ssp_general_settings['form_button_hover_color'];
+		$title_color = $ssp_general_settings['form_button_title_color'];
+		$title_hovercolor = $ssp_general_settings['form_button_title_hover_color'];
 		?>
 
 		<style type="text/css">
 
 			#bsfStripeButton {
-				background:<?php echo $color ?>;
-				color:<?php echo $title_color ?>;;
+				background:<?php _e( $color ); ?>;
+				color:<?php _e( $title_color ); ?>;
 			}
 			#bsfStripeButton:hover {
-				background:<?php echo $hovercolor ?>;
-				color:<?php echo $title_hovercolor ?>;;
+				background:<?php _e( $hovercolor ); ?>;
+				color:<?php _e( $title_hovercolor ); ?>;;
 			}
 		</style><?php
 	}
@@ -69,4 +69,4 @@ class Simple_Stripe_Payment_Scripts {
 
 endif;
 
-new Simple_Stripe_Payment_Scripts();
+new SSP_Payment_Scripts();

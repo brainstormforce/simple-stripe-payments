@@ -5,16 +5,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit();
 }
 
-if ( ! class_exists( 'Simple_Stripe_Payment_Shortcode' ) ) :
+if ( ! class_exists( 'ssp_Payment_Shortcode' ) ) :
 
-class Simple_Stripe_Payment_Shortcode {	
+class SSP_Payment_Shortcode {	
 	public function __construct() {
-		add_shortcode('simple_stripe_payments_form', array( $this, 'bsf_stripe_payment_form') );		
+		add_shortcode('ssp_payments_form', array( $this, 'ssp_ssp_payment_form') );		
 	}
-	function bsf_stripe_payment_form() {
-		global $stripe_general_settings;
-		$var = $stripe_general_settings['form_button_title'];
-		$color = $stripe_general_settings['form_button_color'];
+	function ssp_ssp_payment_form() {
+		global $ssp_general_settings;
+		$var = $ssp_general_settings['form_button_title'];
+		$color = $ssp_general_settings['form_button_color'];
 
 		$output= '';
 		$output.='<div class="bsf-amount-feild">';
@@ -32,4 +32,4 @@ class Simple_Stripe_Payment_Shortcode {
 
 endif;
 
-new Simple_Stripe_Payment_Shortcode();
+new SSP_Payment_Shortcode();
