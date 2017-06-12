@@ -4,7 +4,7 @@ Contributors: brainstormforce, aniljbsfio
 Donate link: https://www.paypal.me/BrainstormForce
 Tags: stripe, custom payment, variable payment, payment with description button, pament stripe, payment gateway, instant variable payment, brainstormforce stripe
 Requires at least: 3.7
-Tested up to: 4.7.3
+Tested up to: 4.8.0
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
