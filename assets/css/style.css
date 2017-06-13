@@ -1,9 +1,9 @@
-.bsf-payment-wrapper {
+.ssp-payment-wrapper {
     width: 750px;
     margin: auto;
     text-align: center;
 }
-.bsf-amount-feild input, .bsf-description-feild textarea {
+.ssp-amount-feild input, .ssp-description-feild textarea {
     display: block;
     width: 100%;
     padding: 12px 6px;
@@ -25,17 +25,17 @@
     border-radius: 4px;
 }
 
-.bsf-description-feild {
+.ssp-description-feild {
     margin: 15px auto;
 }
 
-.bsf-payment-button button {
+.ssp-payment-button button {
     font-size: 16px;
     color: #fff;
     font-weight: bold;
     padding: 5px 12px;
     line-height: 27px;
-    margin: 15px auto;
+    margin: 5px auto;
     background: #1275ff;
     background-image: -webkit-linear-gradient(#7dc5ee,#008cdd 85%,#30a2e4);
     background-image: -moz-linear-gradient(#7dc5ee,#008cdd 85%,#30a2e4);

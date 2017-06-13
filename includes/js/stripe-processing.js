@@ -12,8 +12,8 @@
               action: "ssp_create_payment",
               stripeToken: token.id,
               stripeEmail: token.email,
-              amount: ( jQuery('#bsf-amount').val() * 100 ),
-              description: ( jQuery('#bsf-amount-description').val() )
+              amount: ( jQuery('#ssp-amount').val() * 100 ),
+              description: ( jQuery('#ssp-amount-description').val() )
            },
            error: function(e) {
               jQuery('#info').html('<p>An error has occurred</p>');
@@ -32,7 +32,7 @@
             name: ssp_stripe.ssp_title,
             description: ssp_stripe.ssp_tagline,
             currency: ssp_stripe.ssp_currency,
-            amount: ( jQuery('#bsf-amount').val() * 100 )
+            amount: ( jQuery('#ssp-amount').val() * 100 )
           });
           e.preventDefault();
       });

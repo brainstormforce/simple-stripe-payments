@@ -82,12 +82,12 @@ if ( !array_key_exists( 'form_button_title_hover_color', $ssp_general_settings )
 
 include(SSP_BASE_DIR . '/includes/charge.php');
 
-function add_ajax_actions() {
+function ssp_add_ajax_actions() {
     add_action( 'wp_ajax_ssp_create_payment', 'ssp_create_payment_callback' ); 
 	add_action( 'wp_ajax_nopriv_ssp_create_payment', 'ssp_create_payment_callback' );
 }
 
-add_action( 'init', 'add_ajax_actions' );
+add_action( 'init', 'ssp_add_ajax_actions' );
 
 
 if(is_admin()) {
@@ -105,7 +105,7 @@ if(!get_option('ssp_general_settings')) {
 	$blog_tagline = get_bloginfo ( 'description' );
 	$blog_title = get_bloginfo( 'name' );
     //not present, so add
-    $op = array(
+    $ssp_option = array(
         'form_button_title' => 'Pay',
         'form_button_color' => '#3691b0',
         'form_button_title_color' => '#fff',
@@ -116,5 +116,5 @@ if(!get_option('ssp_general_settings')) {
         'ssp_pay_button' => 'Pay',
         'ssp_currency_type' => 'USD'
     );
-    add_option('ssp_general_settings', $op);
+    add_option('ssp_general_settings', $ssp_option);
 }
