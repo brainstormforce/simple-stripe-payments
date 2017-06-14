@@ -18,7 +18,7 @@ function ssp_create_payment_callback() {
       'email' => $email,
       'card'  => $token,
   ));
-
+  $currency = isset( $ssp_general_settings['ssp_currency_type'] ) ? $ssp_general_settings['ssp_currency_type'] : 'USD';
   $charge = \Stripe\Charge::create(array(
       'customer' => $customer->id,
       'amount'   => $amount,

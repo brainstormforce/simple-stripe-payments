@@ -27,9 +27,7 @@ class SSP_Payment_Scripts {
 		}
 
 		wp_enqueue_style('style', SSP_BASE_URL . 'assets/css/style.css');
-		wp_enqueue_script('jquery');
-		wp_enqueue_script('stripe', 'https://checkout.stripe.com/checkout.js');
-		wp_register_script( 'ssp_processing', SSP_BASE_URL . 'includes/js/stripe-processing.js');
+		wp_register_script( 'ssp_processing', SSP_BASE_URL . 'includes/js/stripe-processing.js', array('jquery'));
 
 		wp_localize_script( 'ssp_processing', 'ssp_stripe',
 	        array( 
@@ -41,8 +39,6 @@ class SSP_Payment_Scripts {
 	      		'ssp_currency' => $ssp_general_settings['ssp_currency_type']	   
 	        )
 	    );
-
-	    wp_enqueue_script( 'ssp_processing' );
 	}
 	function custom_css() {
 		global $ssp_general_settings;

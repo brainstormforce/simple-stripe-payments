@@ -26,6 +26,10 @@ class SSP_Payment_Shortcode {
 		$output.='<div class="ssp-payment-button" >';
 		$output.='<button id="bsfStripeButton">' . __($var, 'simple-stripe-payments') . '</button>';
 		$output.='</div>';
+		
+		wp_enqueue_script('stripe', 'https://checkout.stripe.com/checkout.js');
+		wp_enqueue_script( 'ssp_processing' );
+
 		return $output;
 	}
 }
