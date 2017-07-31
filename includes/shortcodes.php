@@ -28,7 +28,7 @@ class SSP_Payment_Shortcode {
 		$output.='</div>';
 		
 		wp_enqueue_script('stripe', 'https://checkout.stripe.com/checkout.js');
-		wp_enqueue_script( 'ssp_processing' );
+		wp_enqueue_script( 'ssp-processing' );
 
 		return $output;
 	}
