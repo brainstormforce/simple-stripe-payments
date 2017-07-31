@@ -82,13 +82,8 @@ if ( !array_key_exists( 'form_button_title_hover_color', $ssp_general_settings )
 
 include(SSP_BASE_DIR . '/includes/charge.php');
 
-function ssp_add_ajax_actions() {
-    add_action( 'wp_ajax_ssp_create_payment', 'ssp_create_payment_callback' ); 
-	add_action( 'wp_ajax_nopriv_ssp_create_payment', 'ssp_create_payment_callback' );
-}
-
-add_action( 'init', 'ssp_add_ajax_actions' );
-
+add_action( 'wp_ajax_ssp_create_payment', 'ssp_create_payment_callback' ); 
+add_action( 'wp_ajax_nopriv_ssp_create_payment', 'ssp_create_payment_callback' );
 
 if(is_admin()) {
 	// load admin includes
