@@ -1,15 +1,15 @@
 <?php
 
-require_once( STRIPE_BASE_DIR . '/lib/stripe/init.php');
+require_once( SSP_BASE_DIR . '/lib/stripe/init.php');
 
-global $stripe_options;
+global $ssp_options;
 
-if( isset($stripe_options['test_mode'] ) && $stripe_options['test_mode'] ) {
-	$secret_key = $stripe_options['test_secret_key'];
-	$publishable_key = $stripe_options['test_publishable_key'];
+if( isset($ssp_options['test_mode'] ) && $ssp_options['test_mode'] ) {
+	$secret_key = $ssp_options['test_secret_key'];
+	$publishable_key = $ssp_options['test_publishable_key'];
 }else {
-	$secret_key = $stripe_options['live_secret_key'];
-	$publishable_key = $stripe_options['live_publishable_key'];
+	$secret_key = $ssp_options['live_secret_key'];
+	$publishable_key = $ssp_options['live_publishable_key'];
 }
 
 $stripe = array(

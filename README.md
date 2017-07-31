@@ -27,6 +27,6 @@ get payment from your website.
 
 The setup is very easy. Once you have installed the plugin, all you need to do is enter your Stripe API credentials in the plugin settings (Settings -> Stripe Payments) and your website will be ready to accept credit card payments.
 
-`[simple_stripe_payments_form]`
+`[ssp_payments_form]`
 
 
