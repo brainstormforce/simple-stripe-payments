@@ -3,6 +3,7 @@
     margin: auto;
     text-align: center;
 }
+
 .ssp-amount-feild input, .ssp-description-feild textarea {
     display: block;
     width: 100%;
@@ -37,6 +38,7 @@
     line-height: 27px;
     margin: 5px auto;
     background: #1275ff;
+    border-color: transparent;
     background-image: -webkit-linear-gradient(#7dc5ee,#008cdd 85%,#30a2e4);
     background-image: -moz-linear-gradient(#7dc5ee,#008cdd 85%,#30a2e4);
     background-image: -ms-linear-gradient(#7dc5ee,#008cdd 85%,#30a2e4);

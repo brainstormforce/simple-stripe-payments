@@ -26,7 +26,7 @@ class SSP_Payment_Scripts {
 			$publishable = $ssp_options['live_publishable_key'];
 		}
 
-		wp_enqueue_style('style', SSP_BASE_URL . 'assets/css/style.css');
+		wp_enqueue_style('ssp_form_style', SSP_BASE_URL . 'assets/css/style.css');
 		wp_register_script( 'ssp_processing', SSP_BASE_URL . 'includes/js/stripe-processing.js', array('jquery'));
 
 		wp_localize_script( 'ssp_processing', 'ssp_stripe',
