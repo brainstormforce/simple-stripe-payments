@@ -10,7 +10,7 @@
  * Text Domain: simple-stripe-payments
 */
 
-//Slug - bsf_
+//Slug - ssp_
 
 // If this file is called directly, abort. 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -21,15 +21,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 * Constants and globals
 **********************************/
 
-if(!defined('STRIPE_BASE_URL')) {
-	define('STRIPE_BASE_URL', plugin_dir_url(__FILE__));
+if(!defined('SSP_BASE_URL')) {
+	define('SSP_BASE_URL', plugin_dir_url(__FILE__));
 }
-if(!defined('STRIPE_BASE_DIR')) {
-	define('STRIPE_BASE_DIR', dirname(__FILE__));
+if(!defined('SSP_BASE_DIR')) {
+	define('SSP_BASE_DIR', dirname(__FILE__));
 }
 
-$stripe_options = get_option('stripe_settings', array() );
-$stripe_general_settings = get_option('stripe_general_settings', array() );
+$ssp_options = get_option('ssp_settings', array() );
+$ssp_general_settings = get_option('ssp_general_settings', array() );
 
 /*******************************************
 * Plugin text domain for translations
@@ -43,78 +43,74 @@ load_plugin_textdomain( 'simple-stripe-payments', false, dirname( plugin_basenam
 
 if ( !array_key_exists( 'test_mode', $stripe_options ) ) {
 	$stripe_options['test_mode'] = false;
+
 }
 
-if ( !array_key_exists( 'live_secret_key', $stripe_options ) ) {
-	$stripe_options['live_secret_key'] = '';
+if ( !array_key_exists( 'live_secret_key', $ssp_options ) ) {
+	$ssp_options['live_secret_key'] = '';
 }
 
-if ( !array_key_exists( 'live_publishable_key', $stripe_options ) ) {
-	$stripe_options['live_publishable_key'] = '';
+if ( !array_key_exists( 'live_publishable_key', $ssp_options ) ) {
+	$ssp_options['live_publishable_key'] = '';
 }
 
-if ( !array_key_exists( 'test_secret_key', $stripe_options ) ) {
-	$stripe_options['test_secret_key'] = '';
+if ( !array_key_exists( 'test_secret_key', $ssp_options ) ) {
+	$ssp_options['test_secret_key'] = '';
 }
 
-if ( !array_key_exists( 'test_publishable_key', $stripe_options ) ) {
-	$stripe_options['test_publishable_key'] = '';
+if ( !array_key_exists( 'test_publishable_key', $ssp_options ) ) {
+	$ssp_options['test_publishable_key'] = '';
 }
-if ( !array_key_exists( 'form_button_color', $stripe_general_settings ) ) {
-    $stripe_general_settings['form_button_color'] = '';
-}
-
-if ( !array_key_exists( 'form_button_hover_color', $stripe_general_settings ) ) {
-    $stripe_general_settings['form_button_hover_color'] = '';
+if ( !array_key_exists( 'form_button_color', $ssp_general_settings ) ) {
+    $ssp_general_settings['form_button_color'] = '';
 }
 
-if ( !array_key_exists( 'form_button_title_color', $stripe_general_settings ) ) {
-    $stripe_general_settings['form_button_title_color'] = '';
+if ( !array_key_exists( 'form_button_hover_color', $ssp_general_settings ) ) {
+    $ssp_general_settings['form_button_hover_color'] = '';
 }
 
-if ( !array_key_exists( 'form_button_title_hover_color', $stripe_general_settings ) ) {
-    $stripe_general_settings['form_button_title_hover_color'] = '';
+if ( !array_key_exists( 'form_button_title_color', $ssp_general_settings ) ) {
+    $ssp_general_settings['form_button_title_color'] = '';
+}
+
+if ( !array_key_exists( 'form_button_title_hover_color', $ssp_general_settings ) ) {
+    $ssp_general_settings['form_button_title_hover_color'] = '';
 }
 
 /**********************************
 * includes
 **********************************/
 
-include(STRIPE_BASE_DIR . '/includes/charge.php');
+include(SSP_BASE_DIR . '/includes/charge.php');
 
-function add_ajax_actions() {
-    add_action( 'wp_ajax_bsf_create_payment', 'bsf_create_payment_callback' ); 
-	add_action( 'wp_ajax_nopriv_bsf_create_payment', 'bsf_create_payment_callback' );
-}
-
-add_action( 'init', 'add_ajax_actions' );
-
+add_action( 'wp_ajax_ssp_create_payment', 'ssp_create_payment_callback' ); 
+add_action( 'wp_ajax_nopriv_ssp_create_payment', 'ssp_create_payment_callback' );
 
 if(is_admin()) {
 	// load admin includes
-	include(STRIPE_BASE_DIR . '/includes/settings.php');
-	include(STRIPE_BASE_DIR . '/includes/backend-scripts.php');
+	include(SSP_BASE_DIR . '/includes/settings.php');
+	include(SSP_BASE_DIR . '/includes/backend-scripts.php');
 	
 } else {
 // load front-end includes
-include(STRIPE_BASE_DIR . '/includes/scripts.php');
-include(STRIPE_BASE_DIR . '/includes/shortcodes.php');
+include(SSP_BASE_DIR . '/includes/scripts.php');
+include(SSP_BASE_DIR . '/includes/shortcodes.php');
 }
 
-if(!get_option('stripe_general_settings')) {
+if(!get_option('ssp_general_settings')) {
 	$blog_tagline = get_bloginfo ( 'description' );
 	$blog_title = get_bloginfo( 'name' );
     //not present, so add
-    $op = array(
+    $ssp_option = array(
         'form_button_title' => 'Pay',
         'form_button_color' => '#3691b0',
         'form_button_title_color' => '#fff',
         'form_button_hover_color' => '#ADD8E6',
         'form_button_title_hover_color' => '#000',
-        'stripe_title' => $blog_title,
-        'tag_line_for_stripe' => $blog_tagline,
-        'stripe_pay_button' => 'Pay',
-        'stripe_currency_type' => 'USD'
+        'ssp_title' => esc_attr( $blog_title) ,
+        'tag_line_for_stripe' => esc_attr ( $blog_tagline ),
+        'ssp_pay_button' => 'Pay',
+        'ssp_currency_type' => 'USD'
     );
-    add_option('stripe_general_settings', $op);
+    add_option('ssp_general_settings', $ssp_option);
 }

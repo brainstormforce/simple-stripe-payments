@@ -5,10 +5,10 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit();
 }
 
-function bsf_create_payment_callback() {
+function ssp_create_payment_callback() {
 
-  require_once( STRIPE_BASE_DIR . "/includes/config.php" ); 
-    $stripe_general_settings = get_option('stripe_general_settings');
+  require_once( SSP_BASE_DIR . "/includes/config.php" ); 
+    $ssp_general_settings = get_option('ssp_general_settings');
     $token  = esc_attr( $_POST['stripeToken'] );
     $email  = esc_attr( $_POST['stripeEmail'] );
     $amount = esc_attr( $_POST['amount'] );
@@ -18,11 +18,11 @@ function bsf_create_payment_callback() {
       'email' => $email,
       'card'  => $token,
   ));
-
+  $currency = isset( $ssp_general_settings['ssp_currency_type'] ) ? $ssp_general_settings['ssp_currency_type'] : 'USD';
   $charge = \Stripe\Charge::create(array(
       'customer' => $customer->id,
       'amount'   => $amount,
       'description' => $description,
-      'currency' => $stripe_general_settings['stripe_currency_type']
+      'currency' => $ssp_general_settings['ssp_currency_type']
   ));
 }

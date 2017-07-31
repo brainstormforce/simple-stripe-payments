@@ -197,7 +197,7 @@
 ### 2.0.0 2015-02-14
 
 * Bumped minimum version to 5.3.3
-* Switched to Stripe namespace instead of Stripe_ class name prefiexes (thanks @chadicus!)
+* Switched to Stripe namespace instead of stripe_ class name prefiexes (thanks @chadicus!)
 * Switched tests to PHPUnit (thanks @chadicus!)
 * Switched style guide to PSR2 (thanks @chadicus!)
 * Added $opts hash to the end of most methods: this permits passing 'idempotency_key', 'stripe_account', or 'stripe_version'. The last 2 will persist across multiple object loads.
@@ -222,7 +222,7 @@
 
 ### 1.17.2 2014-09-23
 
-* Coupons now are backed by a `Stripe_Coupon` instead of `Stripe_Object`, and support updating metadata
+* Coupons now are backed by a `stripe_Coupon` instead of `stripe_Object`, and support updating metadata
 * Running operations (`create`, `retrieve`, `all`) on upcoming invoice items now works
 
 ### 1.17.1 2014-07-31
@@ -260,7 +260,7 @@
 
 ### 1.12.0 2014-04-01
 
-* Add Stripe_RateLimitError for catching rate limit errors.
+* Add stripe_RateLimitError for catching rate limit errors.
 * Update to Zend coding style (thanks,  @jpiasetz)
 
 ### 1.11.0 2014-01-29
@@ -311,15 +311,15 @@
   were previously using plan or coupon objects with UTF-8 IDs, they
   may have been treated as ISO-8859-1 (Latin-1) and encoded to UTF-8 a
   2nd time. You may now need to pass the IDs to utf8_encode before
-  passing them to Stripe_Plan::retrieve or Stripe_Coupon::retrieve.
+  passing them to stripe_Plan::retrieve or stripe_Coupon::retrieve.
 * Ensure that all input is encoded in UTF-8 before submitting it to
   Stripe's servers. (github issue #27)
 
 ### 1.7.13 2013-02-01
 
 * Add support for passing options when retrieving Stripe objects
-  e.g., Stripe_Charge::retrieve(array("id"=>"foo", "expand" => array("customer")))
-  Stripe_Charge::retrieve("foo") will continue to work
+  e.g., stripe_Charge::retrieve(array("id"=>"foo", "expand" => array("customer")))
+  stripe_Charge::retrieve("foo") will continue to work
 
 ### 1.7.12 2013-01-15
 
@@ -355,7 +355,7 @@
 
 ### 1.7.5 2012-08-23
 
-* Change internal function names so that Stripe_SingletonApiRequest is
+* Change internal function names so that stripe_SingletonApiRequest is
   E_STRICT-clean (github issue #16)
 
 ### 1.7.4 2012-08-21
@@ -374,16 +374,16 @@
 
 ### 1.7.1 2012-05-24
 
-* Add missing argument to Stripe_InvalidRequestError constructor in
-  Stripe_ApiResource::instanceUrl. Fixes a warning when
-  Stripe_ApiResource::instanceUrl is called on a resource with no ID
+* Add missing argument to stripe_InvalidRequestError constructor in
+  stripe_ApiResource::instanceUrl. Fixes a warning when
+  stripe_ApiResource::instanceUrl is called on a resource with no ID
   (github issue #12)
 
 ### 1.7.0 2012-05-17
 
 * Support Composer and Packagist (github issue #9)
 
-* Add new deleteDiscount method to Stripe_Customer
+* Add new deleteDiscount method to stripe_Customer
 
 * Add new Transfer resource
 
