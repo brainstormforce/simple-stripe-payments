@@ -51,12 +51,12 @@ class SSP_Payment_Scripts {
 		<style type="text/css">
 
 			#bsfStripeButton {
-				background:<?php _e( $color ); ?>;
-				color:<?php _e( $title_color ); ?>;
+				background:<?php echo esc_attr( $color ); ?>;
+				color:<?php echo esc_attr( $title_color ); ?>;
 			}
 			#bsfStripeButton:hover {
-				background:<?php _e( $hovercolor ); ?>;
-				color:<?php _e( $title_hovercolor ); ?>;;
+				background:<?php echo esc_attr( $hovercolor ); ?>;
+				color:<?php echo esc_attr( $title_hovercolor ); ?>;
 			}
 		</style><?php
 	}
