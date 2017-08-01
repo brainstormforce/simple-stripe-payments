@@ -41,9 +41,8 @@ load_plugin_textdomain( 'simple-stripe-payments', false, dirname( plugin_basenam
 * Declared global setting variables
 *******************************************/
 
-if ( !array_key_exists( 'test_mode', $stripe_options ) ) {
-	$stripe_options['test_mode'] = false;
-
+if ( !array_key_exists( 'test_mode', $ssp_options ) ) {
+	$ssp_options['test_mode'] = false;
 }
 
 if ( !array_key_exists( 'live_secret_key', $ssp_options ) ) {
