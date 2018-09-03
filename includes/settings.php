@@ -218,7 +218,7 @@ class ssp_Payment_Settings {
 							</th>
 							<td>
 								<input id="ssp_general_settings[ssp_currency_type]" name="ssp_general_settings[ssp_currency_type]" type="text" class="regular-text" value="<?php echo $ssp_general_settings['ssp_currency_type']; ?>"/>
-								<p class="input-desc"><?php _e( 'Specify a currency using it\'s <a href="https://support.stripe.com/questions/which-currencies-does-stripe-support#currencygroup1" target="_blank">3-letter Code</a>','simple-stripe-payments' )?></p>
+								<p class="input-desc"><?php _e( 'Specify a currency using it\'s <a href="https://stripe.com/docs/currencies#presentment-currencies" target="_blank">3-letter Code</a>','simple-stripe-payments' )?></p>
 								<label class="description" for="ssp_general_settings[ssp_currency_type]"></label>
 							</td>
 						</tr>
