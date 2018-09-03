@@ -6,7 +6,7 @@
  * Author: brainstormforce
  * Author URI: http://brainstormforce.com/
  * Contributors: Anil
- * Version: 1.0
+ * Version: 1.0.1
  * Text Domain: simple-stripe-payments
 */
 

@@ -4,8 +4,8 @@ Contributors: brainstormforce, aniljbsfio
 Donate link: https://www.paypal.me/BrainstormForce
 Tags: stripe, custom payment, variable payment, payment with description button, pament stripe, payment gateway, instant variable payment, brainstormforce stripe
 Requires at least: 3.7
-Tested up to: 4.8.3
-Stable tag: 1.0.0
+Tested up to: 4.9.8
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,9 +13,7 @@ Supports Variable Amount in Checkout - Stripe
 
 == Description ==
 
-The Simple Stripe Payments plugin allows you to accept credit card payments via Stripe payment gateway on your WordPress site easily. 
-
-It has a simple shortcode that lets you put Stripe payment form anywhere on your site for a product or service. You can accept donation via Stripe also.
+The Simple Stripe Payments plugin allows you to accept credit card payments via Stripe payment gateway on your WordPress site easily. It has a simple shortcode that lets you put Stripe payment form anywhere on your site for a product or service. You can accept donation via Stripe also.
 
 You can accept custom payment from the user, with payment and payment descriptions.
 
@@ -40,7 +38,13 @@ The setup is very easy. Once you have installed the plugin, all you need to do i
 
 == Changelog ==
 
-Initial release
+### 1.0.1 ###
+
+* Load script on specific pages.
+
+### 1.0 ###
+
+* Initial release
 
 == Installation ==
 
