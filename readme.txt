@@ -1,6 +1,6 @@
 ===  Simple Stripe Payments ===
 
-Contributors: brainstormforce, aniljbsfio
+Contributors: brainstormforce
 Donate link: https://www.paypal.me/BrainstormForce
 Tags: stripe, custom payment, variable payment, payment with description button, pament stripe, payment gateway, instant variable payment, brainstormforce stripe
 Requires at least: 3.7
